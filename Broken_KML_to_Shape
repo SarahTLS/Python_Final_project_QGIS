@@ -1,0 +1,22 @@
+    from qgis.core import QgsVectorFileWriter, QgsVectorLayer
+
+    dest_crs = QgsCoordinateReferenceSystem(4326) 
+    vlayer = QgsVectorLayer(r"C:/Users/Sarah/Desktop/MOF_Data_QGIS/Gas_Leaks_2018/KML_Data/GasLeaks2018.kml", "GasLeaks2018", "ogr") # input the path, name of the file, and the library (ogr is for shapefiles and kml alike)
+    QgsMapLayerRegistry.instance().addMapLayer(vlayer)
+    QgsMapLayerRegistry.instance().removeMapLayer(vlayer)
+
+    _writer = QgsVectorFileWriter.writeAsVectorFormat\
+    (_vlayer,"gasfile.shp","utf-8",dest_crs,"ESRI Shapefile")
+
+    _writer = QgsVectorFilewriter.writeAsVectorFormat(vlayer,r"C:/Users/Sarah/Desktop/MOF_Data_QGIS/Gas_Leaks_2018/KML_Data/gas2018shape.shp",dest_CRS,"ESRI Shapefile")
+    _writer = QgsVectorFilewriter.writeAsVectorFormat(vlayer,r"C:/Users/Sarah/Desktop/MOF_Data_QGIS/Gas_Leaks_2018/KML_Data/Shapefile/gas2018shape.shp","utf-8",dest_crs,"ESRI Shapefile"
+
+    GasLeaks2018.kml",dest_CRS,"ESRI Shapefile")
+
+
+
+    output_layer = r"C:/Users/Sarah/Desktop/Test.shp"
+    QgsVectorFileWriter.writeAsVectorFormat(layer, output_layer, "utf-8", dest_crs, "SHP")
+    print ("KML to Layer Conversion Complete")
+    print (output_layer + " is now a .shp")
+        
