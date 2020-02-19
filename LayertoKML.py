@@ -1,4 +1,4 @@
-#Creating a layer from a KML
+#Creating a KML from a shapefile
 
 # Importing the appropriate packages
 from qgis.core import QgsVectorFileWriter, QgsVectorLayer
