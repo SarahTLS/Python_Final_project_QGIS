@@ -1,0 +1,38 @@
+# Import the modules we will useAdvancedEffects
+
+from qgis.core import QgsVectorFileWriter, QgsVectorLayer
+
+# set project CRS
+
+QgsCoordinateReferenceSystem("EPSG:26986")
+
+# Convert the downloaded KML gas leak data to a shapefile
+
+
+# add the gas leak point data to the map
+GasFilePath =   r"C:/Users/Sarah/Desktop/MOF_Data_QGIS/Gas_Leaks_2018/KML_Data/AsShapefile2.shp"
+gasleaklayer = QgsVectorLayer(GasFilePath, "Gas_Leaks_2018", "ogr")
+QgsProject.instance().addMapLayer(gasleaklayer)
+
+# add the schools data to the map
+
+SchoolsFilePath = r"C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/Schools/SCHOOLS_PT.shp"
+schoolslayer= QgsVectorLayer(SchoolsFilePath, "MA_Schools", "ogr")
+QgsProject.instance().addMapLayer(schoolslayer)
+
+
+# project the gas leak data to massachusetts state plane
+
+import processing # import the processing algorithm
+
+processing.runalg("qgis:reprojectlayer", "GasFilePath", "epsg:26986", "GasFilePath") # need to add new shapefile to this string  
+
+
+
+
+
+# Spatial join to figure out the gas leak closest to each school
+
+# Export table with the data
+
+
