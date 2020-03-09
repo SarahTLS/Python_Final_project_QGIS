@@ -16,7 +16,7 @@ from qgis.core import QgsVectorFileWriter, QgsVectorLayer
 
 from qgis.core import QgsVectorFileWriter, QgsVectorLayer  #import QPyGIS modules
 
-dest_crs = QgsCoordinateReferenceSystem(4326) # create a variable with a coordinate reference system
+dest_crs = QgsCoordinateReferenceSystem(26986) # create a variable with a coordinate reference system
 vlayer = QgsVectorLayer(r"C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/GasLeaks2018.kml", "line", "ogr") # input KML file to be written as a shapfile
 writer = QgsVectorFileWriter.writeAsVectorFormat(vlayer, r"C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/GasLeaks2018_shapefile.shp", "utf-8", dest_crs, "ESRI Shapefile") # output file to be written as shapefile
 
