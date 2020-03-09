@@ -12,7 +12,7 @@
 
 from qgis.core import QgsVectorFileWriter, QgsVectorLayer
 
-# set project CRS
+# Create a CRS object for the KML Data to use
 
 QgsCoordinateReferenceSystem("EPSG:26986")
 
