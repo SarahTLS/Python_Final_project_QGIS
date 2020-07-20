@@ -8,7 +8,7 @@ A future direction for this code is to create a custom toolbox, similar to ones 
 Note QGIS 3.8 Zanzibar is required to run this tutorial.
 
 ## Step 1. Download and Unzip the data
-All the data for this lab are available here. 
+All the data for this lab are available in the "final_project_data.zip" file in this repo
 
 ## Step 2. Inspect the script
 You’ll notice here that this script inputs a KML file of gas leaks and a shapefile of Massachusetts schools, and creates multiple new files. Find and identify the file names for each of the files that this script outputs including:
