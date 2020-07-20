@@ -28,8 +28,8 @@ ProjectedGasFilePath = GasFilePath_split[0] + '/GasLeaks2018Projected.shp' # Usi
 print (ProjectedGasFilePath) # check that string editing code worked
 
 import processing # import the processing algorithm
-processing.run("native:assignprojection", {'INPUT': GasFilePath,
-'CRS':'epsg:3857','OUTPUT':ProjectedGasFilePath}) 
+processing.run("native:reprojectlayer", {'INPUT': GasFilePath,
+'TARGET_CRS':'epsg:3857','OUTPUT':ProjectedGasFilePath}) 
 
 # project the schools data to massachusetts state plane
 
@@ -37,7 +37,7 @@ SchoolsFilePath = 'C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/F
 SchoolsFilePath_split = SchoolsFilePath.split('/A')
 ProjectedSchoolsFilePath = SchoolsFilePath_split[0] + '/SchoolsProjected.shp' # Using string editing to create a new filepath for the projected file
 print (ProjectedSchoolsFilePath) # check that string editing code worked
-processing.run("native:assignprojection", {'INPUT': SchoolsFilePath,'CRS':'epsg:3857','OUTPUT':ProjectedSchoolsFilePath}) 
+processing.run("native:reprojectlayer", {'INPUT': SchoolsFilePath,'TARGET_CRS':'epsg:3857','OUTPUT':ProjectedSchoolsFilePath}) 
 
 # Spatial join to figure out the gas leak closest to each school
 
