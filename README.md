@@ -30,15 +30,17 @@ There are multiple times in this script where you’ll see the text “ESPG:####
 ##Step 5. Learn about Processing Algorithms in QPyGIS
 Let’s stop and take a deeper dive into what’s happening in this code block containing line 32. In the line before (Line 31), you’ll see the command beginning with processing.run( . QGIS contains a vast library of algorithms used for geoprocessing. The code in line 31 calls a specific processing algorithm. Let’s take a minute and see what the different options are for processing in QGIS
 
-•	Open QGIS
-•	Open the python console using the   button in the upper toolbar
-•	QGIS has an internal script editor, open a new one using the   button
-•	Enter the following code, taken from the QGIS 3 documentation:
+•Open QGIS
+•Open the python console using the   button in the upper toolbar
+•QGIS has an internal script editor, open a new one using the   button
+•Enter the following code, taken from the QGIS 3 documentation:
 
 >>> import processing
 >>> for alg in QgsApplication.processingRegistry().algorithms():
         print(alg.id(), "->", alg.displayName())
+
 This will output a long list of geoprocessing algorithms that QGIS can run (some of which are native to the application, some of which rely on GDAL and other libraries). Do you see any geoprocessing operations that you recognize? Pick one that you’d like to learn more about, and replace “native:buffer” into the following code:
+
 >>> processing.algorithmHelp("native:buffer") 
 
 A detailed description of the algorithm and the required inputs should pop up in the command window.
