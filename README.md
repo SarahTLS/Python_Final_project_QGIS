@@ -1,6 +1,6 @@
 # Projecting Data, Spatial Joins, and Table Exports with PyQGIS
 
-### Follow along using the script for this tutorial -- the purpose of the script is to produce a spreadsheet identifying the gas leak closest to each school. Spreadsheets like these have been used by local community organizations to prioritize their activism around gas leaks and better communicate with utilities. 
+### Follow along using the "complete_final_project_script.py" script for this tutorial -- the purpose of the script is to produce a spreadsheet identifying the gas leak closest to each school. Spreadsheets like these have been used by local community organizations to prioritize their activism around gas leaks and better communicate with utilities. 
 I knew the series of geoprocessing operations I needed this script to do at the outset. However, I had no idea how to script them in QGIS. Largely I solved this issue by navigating the documentation in QGIS and searching Stack Overflow. This tutorial will provide an overview of the different commands used to perform these operations.
 
 A future direction for this code is to create a custom toolbox, similar to ones used in ArcMap, so that the input and output file paths and desired Coordinate Reference Systems are not hard-coded into the script, and so that users have a GUI to input their own files.
