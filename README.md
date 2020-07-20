@@ -1,6 +1,6 @@
-## Projecting Data, Spatial Joins, and Table Exports with PyQGIS
+# Projecting Data, Spatial Joins, and Table Exports with PyQGIS
 
-### Please follow along using the script for this tutorial. The purpose of this script is to produce a spreadsheet identifying the gas leak closest to each school. Spreadsheets like these have been used by a local climate justice organization, Mothers Out Front, to prioritize their activism and better communicate with utilities. 
+### Follow along using the script for this tutorial -- the purpose of the script is to produce a spreadsheet identifying the gas leak closest to each school. Spreadsheets like these have been used by a local climate justice organization, Mothers Out Front, to prioritize their activism and better communicate with utilities. 
 I knew the series of geoprocessing operations I needed this script to do at the outset. However, I had no idea how to script them in QGIS. Largely I solved this issue by navigating the documentation in QGIS and searching Stack Overflow. This tutorial will provide an overview of the different commands used to perform these operations.
 
 A future direction for this code is to create a custom toolbox, similar to ones used in ArcMap, so that the input and output file paths and desired Coordinate Reference Systems are not hard-coded into the script, and so that users have a GUI to input their own files.
@@ -58,9 +58,9 @@ Look familiar? This is a throwback to where we wrote the KML as a shapefile back
 
 Download the complete script from github and open it up in the QGIS editor. Click the run   button. The gas leaks layer and the schools layer should pop up on the map.
 Inspect the output code. This script used string editing to create new file paths for the multiple files produced here, and print statements within the code outputted the file paths for the final projected gas leaks and schools layer, as well as the table outputted after the join operation:
-C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/GasLeaks2018Projected.shp
-C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/SchoolsProjected.shp
-C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/SchoolswLeaksTable.CSV
+> C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/GasLeaks2018Projected.shp
+> C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/SchoolsProjected.shp
+> C:/Users/Sarah/Documents/Clark_Fall_2019/Programming_python/Final_project_data/SchoolswLeaksTable.CSV
 
 •	Open up the spreadsheet at the file path listed above and locate the “distance” field. This give you the distance to the nearest gas leak in the units of the coordinate reference system chosen above!
 
