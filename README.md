@@ -48,7 +48,7 @@ A detailed description of the algorithm and the required inputs should pop up in
 ## Step 6. Learn about writing vector files in QGIS
 Inspect the last line of the script (line 66). You’ll see here a command:
 
-QgsVectorFileWriter.writeAsVectorFormat(
+> QgsVectorFileWriter.writeAsVectorFormat(
 
 Look familiar? This is a throwback to where we wrote the KML as a shapefile back on Line 21. You’ll notice however that the last parameter here says “CSV” instead of “ESRI Shapefile”. Let’s look through the documentation for this command and see what other formats QGIS can write to.
 •	In the toolbar above the command window, click the help   button. 
